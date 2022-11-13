@@ -1,0 +1,177 @@
+/* flex布局 */
+
+.flex-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 首页-标题 */
+
+.home-title {
+  position: absolute;
+  top: 40rpx;
+  left: 20rpx;
+}
+
+/* 首页-标题-名字 */
+
+.home-title-name {
+  width: 150rpx;
+  height: 70rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+  border-left: 4rpx solid rgb(56, 131, 41, 0.5);
+  padding-left: 15rpx;
+  vertical-align: middle;
+}
+
+/* 首页-标题-信息 */
+
+.home-title-info {
+  font-size: 30rpx;
+  border-left: 4rpx solid rgb(56, 131, 41, 0.5);
+  padding-left: 15rpx;
+}
+
+/* 首页-进入详情页面按钮 */
+
+.home-button-to-info {
+  top: 700rpx;
+}
+
+/* 首页-左侧第一个圆 */
+
+.guide-title-circle1 {
+  position: absolute;
+  /* top: 220rpx; */
+  left: -300rpx;
+  width: 520rpx;
+  height: 520rpx;
+  background-color: rgb(56, 131, 41, 0.5);
+  border-radius: 260rpx;
+}
+
+/* 首页-右侧第一个圆 */
+
+.guide-title-circle2 {
+  position: absolute;
+  /* top: 220rpx; */
+  right: -200rpx;
+  width: 360rpx;
+  height: 360rpx;
+  background-color: rgb(56, 131, 41, 0.5);
+  border-radius: 260rpx;
+}
+
+/* 首页-右侧第二个圆 */
+
+.guide-title-circle3 {
+  position: absolute;
+  /* top: 820rpx; */
+  right: -90rpx;
+  width: 220rpx;
+  height: 220rpx;
+  background-color: rgba(218, 172, 49, 0.5);
+  border-radius: 260rpx;
+}
+/* --------------------简历内容------------------------- */
+/* 简历详情-卡片 */
+
+.info-card {
+  margin: 30rpx;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  width: 91%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+}
+
+/* 简历详情-卡片标题 */
+
+.info-card-title {
+  position: relative;
+  left: -30rpx;
+  top: -43rpx;
+  width: 200rpx;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(61, 145, 13, 0.836);
+  z-index: 15;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.137);
+}
+
+/* 简历详情-卡片标题-小三角 */
+
+.info-card-title::before {
+  position: absolute;
+  bottom: -31rpx;
+  display: block;
+  z-index: 0;
+  content: '';
+  border-top: 16px solid rgba(7, 105, 20, 0.856);
+  border-left: 16px solid transparent;
+}
+
+/* 简历详情-基础信息 */
+
+.info-card-base {
+  position: absolute;
+  height: 300rpx;
+  background-color: #fff;
+  z-index: 10;
+}
+
+/* 基础-图片-容器 */
+
+.base-img-v {
+  position: relative;
+  top: -15rpx;
+  left:15rpx;
+  margin: 10rpx;
+  height: 100rpx;
+  width: 20%;
+}
+/* 头像 */
+
+.base-img {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.233), 0 0 6px rgba(0, 0, 0, 0.233);
+}
+
+/* 基础信息第一行 */
+
+.base-row-1 {
+  position: relative;
+  top: -25rpx;
+}
+
+/* 基础-信息-容器 */
+
+.base-info-v {
+  margin: 15rpx;
+  font-size: 25rpx;
+  height: 45rpx;
+  border-bottom: 1px dashed #333;
+}
+
+
+
+
+/* 简历详情-学校 */
+
+.info-card-school {
+  position: absolute;
+  height: 300rpx;
+  background-color: #fff;
+  z-index: 11;
+}
+
+/* 简历详情-工作经历 */
+
+.info-card-experience {
+  position: absolute;
+  height: 300rpx;
+  background-color: #fff;
+  z-index: 12;
+}

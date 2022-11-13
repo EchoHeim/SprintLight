@@ -1,0 +1,115 @@
+/* pages/comment/comment.wxss */
+
+/* 留言板-标题 */
+
+.comment-title {
+  text-align: center;
+  position: relative;
+  margin: 30rpx 0;
+  font-size: 40rpx;
+}
+
+/* 留言板-左侧横线 */
+
+.comment-title::before {
+  content: '';
+  width: 35%;
+  height: 1px;
+  background: #dcdfe6;
+  position: absolute;
+  left: 30rpx;
+  top: 50%;
+}
+
+/* 留言板-右侧横线 */
+
+.comment-title::after {
+  content: '';
+  width: 35%;
+  height: 1px;
+  background: #dcdfe6;
+  position: absolute;
+  right: 30rpx;
+  top: 50%;
+}
+
+/* -------------------------------------------- */
+
+/* 波浪 */
+
+.wave {
+  position: fixed;
+  width: 800rpx;
+  height: 800rpx;
+  border-radius: 47%;
+}
+
+/* 波浪1 */
+
+.wave_1 {
+  bottom: -730rpx;
+  left: -250rpx;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  animation: rotate 5s linear -5s infinite;
+  z-index: 10
+}
+
+/* 波浪2 */
+
+.wave_2 {
+  bottom: -730rpx;
+  left: -50rpx;
+  background-color: rgb(56, 131, 41, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  animation: rotate 7s linear -5s infinite;
+}
+
+/* 波浪3 */
+
+.wave_3 {
+  bottom: -730rpx;
+  left: 150rpx;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  animation: rotate 9s linear -5s infinite;
+  z-index: 10
+}
+
+/* 波浪4 */
+
+.wave_4 {
+  bottom: -730rpx;
+  left: 350rpx;
+  background-color: rgb(56, 131, 41, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  animation: rotate 11s linear -5s infinite;
+}
+
+@keyframes rotate {
+  50% {
+    transform: translate(-0%, -0%) rotate(180deg);
+  }
+
+  100% {
+    transform: translate(-0%, -0%) rotate(360deg);
+  }
+}
+
+/* -------------------------------------------- */
+
+/* 基础-input */
+
+.comment-input {
+  margin: 35rpx 20rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14), 0 0 6px rgba(0, 0, 0, 0.07);
+  border-radius: 10rpx;
+  padding: 17rpx;
+}
+
+.comment-input-focus {
+  border: 1px solid rgb(23, 165, 165);
+}
+.send-button{
+  position: relative;
+}

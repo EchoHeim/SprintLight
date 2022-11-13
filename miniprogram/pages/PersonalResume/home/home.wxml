@@ -1,0 +1,13 @@
+<swiper style="height:{{height}}px" bindchange="handleSwiperChange" current="{{current}}">
+  <!-- 引导页面 -->
+  <swiper-item item-id="home">
+    <view class="guide-title-circle1" bindtap="circle1Click"></view>
+    <view class="guide-title-circle2"></view>
+    <view class="guide-title-circle3"></view>
+    <view class="home-title">
+      <view class="home-title-name"> 黄世龙 </view>
+      <view class="home-title-info"> Linux驱动工程师 </view>
+    </view>
+    <button class="home-button-to-info" type="primary" plain="true" bindtap="to_info">简历详情</button>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,271 @@
+/* --------------------简历内容------------------------- */
+
+/* 简历页面容器 */
+
+.info-container {
+  margin: 50rpx 20rpx;
+}
+
+/* +++++++++++留言+++++++++++ */
+
+/* 留言-容器 */
+
+.info-comment-container {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 20;
+}
+
+/* 留言-图片 */
+
+.info-comment-img {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+/* +++++++++++留言+++++++++++ */
+
+/* +++++++++++基础信息+++++++++++ */
+
+/* 简历详情-卡片标题 */
+
+.info-card-title {
+  position: relative;
+  left: -30rpx;
+  top: 0rpx;
+  width: 200rpx;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(61, 145, 13, 0.836);
+  z-index: 15;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.137);
+}
+
+/* 简历详情-卡片标题-小三角 */
+
+.info-card-title::before {
+  position: absolute;
+  bottom: 70rpx;
+  display: block;
+  z-index: 0;
+  content: '';
+  border-top: 16px solid rgba(7, 105, 20, 0.856);
+  border-left: 16px solid transparent;
+}
+
+/* 基础-图片-容器 */
+
+.base-img-v {
+  position: relative;
+  top: -15rpx;
+  left: 15rpx;
+  margin: 10rpx;
+  height: 100rpx;
+  width: 20%;
+}
+
+/* 头像 */
+
+.base-img {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.233), 0 0 6px rgba(0, 0, 0, 0.233);
+}
+
+/* 基础-信息-容器 */
+
+.base-row-container {
+  margin: 15rpx;
+  font-size: 25rpx;
+  height: 45rpx;
+  border-bottom: 1px dashed #333;
+}
+
+/* +++++++++++基础信息+++++++++++ */
+
+/* +++++++++++项目展示+++++++++++ */
+
+/* 项目展示轮播 */
+
+.scroll-box {
+  width: 94%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 30rpx 20rpx;
+}
+
+/* 项目展示轮播-x轴 */
+
+.scroll-item-x {
+  width: 190rpx;
+  height: auto;
+  margin: 5rpx 14.5rpx;
+  display: inline-block;
+}
+
+/* 项目展示轮播-文字 */
+
+.scroll-item-x .scroll-item-title {
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #777;
+  text-indent: 10rpx;
+}
+
+/* +++++++++++项目展示+++++++++++ */
+
+/* +++++++++++教育背景+++++++++++ */
+
+/* 学校项 */
+
+.school-item {}
+
+/* 学校项-图标 */
+
+.school-item-icon {
+  vertical-align: -15rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 学校项-标题 */
+
+.school-item-title {
+  font-size: 30rpx;
+}
+
+/* 学校项-专业 */
+
+.school-item-specialty {
+  float: left;
+  font-size: 25rpx;
+  color: #828282;
+  margin-left: 25rpx;
+}
+
+/* 学校项-在校时间 */
+
+.school-item-timeslot {
+  float: right;
+  font-size: 25rpx;
+  color: #828282;
+  margin-right: 25rpx;
+}
+
+/* +++++++++++教育背景+++++++++++ */
+
+/* +++++++++++工作经历+++++++++++ */
+
+/* 经历项 */
+
+.experience-item {}
+
+/* 经历-图标 */
+
+.experience-item-icon {
+  vertical-align: -15rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 经历-标题 */
+
+.experience-item-title {
+  font-size: 30rpx;
+}
+
+/* 经历-负责工作 */
+
+.experience-item-job {
+  float: left;
+  font-size: 25rpx;
+  color: #828282;
+  margin-left: 25rpx;
+}
+
+/* 经历-在职时间 */
+
+.experience-item-timeslot {
+  float: right;
+  font-size: 25rpx;
+  color: #828282;
+  margin-right: 25rpx;
+}
+
+.experience-item-introduce {
+  float: right;
+  font-size: 25rpx;
+  color: #828282;
+  margin-left: 25rpx;
+  text-indent: 35rpx;
+}
+
+/* +++++++++++工作经历+++++++++++ */
+
+/* +++++++++++项目展示+++++++++++ */
+
+/* 项目项 */
+
+.project-item {}
+
+/* 项目项-图标 */
+
+.project-item-icon {
+  vertical-align: -15rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 项目项-标题 */
+
+.project-item-title {
+  font-size: 30rpx;
+}
+
+/* 项目项-负责工作 */
+
+.project-item-job {
+  float: left;
+  font-size: 25rpx;
+  color: #828282;
+  margin-left: 25rpx;
+}
+
+/* 项目项-在职时间 */
+
+.project-item-timeslot {
+  float: right;
+  font-size: 25rpx;
+  color: #828282;
+  margin-right: 25rpx;
+}
+
+/* 项目地址 */
+
+.project-item-url {
+  font-size: 27rpx;
+  color: #413f3f;
+  margin-left: 25rpx;
+}
+
+/* 项目项-描述/介绍 */
+
+.project-item-introduce {
+  float: right;
+  font-size: 25rpx;
+  color: #828282;
+  margin-left: 25rpx;
+  text-indent: 35rpx;
+}
+
+/* +++++++++++工作经历+++++++++++ */
+/* 自我评价 */
+.selfassessment-info {
+  font-size: 25rpx;
+  border-bottom: 1px dashed #333;
+}
+
+/* 自我评价 */

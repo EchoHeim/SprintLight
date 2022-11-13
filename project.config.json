@@ -11,7 +11,7 @@
         "newFeature": true,
         "coverView": true,
         "nodeModules": false,
-        "autoAudits": false,
+        "autoAudits": true,
         "showShadowRootInWxmlPanel": true,
         "scopeDataCheck": false,
         "uglifyFileName": false,
@@ -42,7 +42,7 @@
     "appid": "wxc796aa4a0b4af49e",
     "projectname": "sprintlight",
     "libVersion": "2.20.1",
-    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
     "condition": {
         "search": {
             "list": []
@@ -65,5 +65,15 @@
                 }
             ]
         }
+    },
+    "compileType": "miniprogram",
+    "srcMiniprogramRoot": "miniprogram/",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
     }
 }

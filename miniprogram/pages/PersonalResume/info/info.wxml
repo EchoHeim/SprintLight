@@ -1,0 +1,148 @@
+<view class="global-container">
+    <!-- 留言 -->
+    <view class="info-comment-container" bindtap="to_comment_page">
+        <image src="../../../images/PR_imgs/send_message.png" class="info-comment-img"></image>
+    </view>
+    <!-- 基础 -->
+    <view class="global-card">
+        <view class="info-card-title">基础信息</view>
+        <view class="global-card-container">
+            <!-- 头像 -->
+            <view class="base-img-v" style="float:left;">
+                <image class="base-img" src="../../../images/PR_imgs/test.jpg"></image>
+            </view>
+            <!-- 基础信息 -->
+            <view class="base-row-container" style="column-count: 2;">
+                <view>姓名 : {{personalInfo.name}}
+                </view>
+                <view>年龄 : {{personalInfo.age}}
+                </view>
+            </view>
+            <view class="base-row-container" style="column-count: 2;">
+                <view>学历 : {{personalInfo.schoolBackground}}</view>
+                <view>工作年限 : {{personalInfo.jobYear}}</view>
+            </view>
+        </view>
+        <view class="global-card-container">
+
+            <!-- 联系方式 -->
+            <view class="base-row-container" style="column-count: 2;">
+                <view>电话 : {{personalInfo.tel}}</view>
+                <view>地址 : {{personalInfo.address}}</view>
+            </view>
+            <view class="base-row-container" style="column-count: 1;">
+                <view>邮箱 : {{personalInfo.email}}</view>
+            </view>
+
+        </view>
+    </view>
+    <!-- 教育背景 -->
+    <view class="global-card" style="min-height: {{150*personalInfo.schoolsInfo.length}}rpx;">
+        <view class="info-card-title">教育背景</view>
+        <view class="global-card-container" style="height: 100rpx;" wx:for="{{personalInfo.schoolsInfo}}" wx:for-index="school_idx" wx:for-item="school" wx:key="school_idx">
+            <view class="school-item">
+                <image class="school-item-icon" src="../../../images/PR_imgs/school.png"></image>
+                <text class="school-item-title">{{school.schoolName}}</text>
+            </view>
+            <view>
+                <view class="school-item-specialty">{{school.specialty}}</view>
+                <view class="school-item-timeslot">{{school.timeSlot}}</view>
+            </view>
+        </view>
+
+    </view>
+    <!-- 掌握技能 -->
+    <view class="global-card" style="min-height: {{80*personalInfo.skillsInfo.length}}rpx;">
+        <view class="info-card-title">掌握技能</view>
+        <view class="global-card-container" style="height: 100rpx;">
+            <view wx:for="{{personalInfo.skillsInfo}}" wx:for-index="skill_index" wx:for-item="skill_item" wx:key="skill_index">
+                <text style="margin-left:35rpx;font-size:25rpx;color: #828282;">{{skill_item.skillName}}</text>
+                <view class="global-progress">
+                    <view class="global-progress-done" style="width:{{skill_item.progress}};">
+                        {{skill_item.progress}}
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+
+    <!-- 工作经历 -->
+    <view class="global-card" style="min-height: {{200*personalInfo.experiencesInfo.length}}rpx;">
+        <view class="info-card-title">工作经历</view>
+        <view class="global-card-container" style="height: 100rpx;" wx:for="{{personalInfo.experiencesInfo}}" wx:for-index="experience_idx" wx:for-item="experience" wx:key="experience_idx">
+            <view class="experience-item">
+                <image class="experience-item-icon" src="../../../images/PR_imgs/company.png"></image>
+                <text class="experience-item-title">{{experience.companyName}}</text>
+            </view>
+            <view>
+                <view class="experience-item-job">{{experience.job}}</view>
+                <view class="experience-item-timeslot">{{experience.timeSlot}}</view>
+            </view>
+            <view>
+                <view class="experience-item-introduce"> {{experience.introduce}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 项目展示 -->
+    <view class="global-card">
+        <view class="info-card-title">项目展示</view>
+
+        <view class="global-card-container" wx:for="{{personalInfo.projectsInfo}}" wx:for-index="pro_idx" wx:for-item="pro_item" wx:key="pro_idx">
+
+            <view class="project-item">
+                <image class="project-item-icon" src="../../../images/PR_imgs/project.png"></image>
+                <text class="project-item-title">{{pro_item.projectName}}</text>
+                <view>
+                    <view class="project-item-url">{{pro_item.projectUrl}}</view>
+                </view>
+                <view>
+                    <view class="project-item-job">{{pro_item.job}}</view>
+                    <view class="project-item-timeslot">{{pro_item.timeSlot}}</view>
+                </view>
+                <view>
+                    <view class="project-item-introduce"> {{pro_item.introduce}}</view>
+                </view>
+
+                <!-- 项目图片展示 -->
+                <view class="scroll-box">
+                    <scroll-view scroll-x style="width: auto;overflow:hidden;">
+                        <view class="scroll-item-x" wx:for="{{pro_item.imgList}}" wx:for-index="img_idx" wx:for-item="img_item" wx:key="img_idx">
+                            <view class="global-img-container" data-img-urls="{{pro_item.imgList}}" data-item="{{img_item}}" bindtap="previewImg">
+                                <image src="{{img_item.imgUrl}}" class="global-img" mode="widthFix"></image>
+                            </view>
+                            <view class='scroll-item-title'>{{img_item.imgTitle}}</view>
+                        </view>
+                    </scroll-view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+    <!-- 荣誉证书 -->
+    <view class="global-card">
+        <view class="info-card-title">荣誉证书</view>
+        <!-- 项目图片展示 -->
+        <view class="global-card-container">
+            <view class="scroll-box">
+                <scroll-view scroll-x style="width: auto;overflow:hidden;">
+                    <view class="scroll-item-x" wx:for="{{personalInfo.certificatesInfo}}" wx:for-index="cre_idx" wx:for-item="cre_item" wx:key="cre_idx">
+                        <view class="global-img-container" data-img-urls="{{personalInfo.certificatesInfo}}" data-item="{{cre_item}}" bindtap="previewImg">
+                            <image src="{{cre_item.imgUrl}}" class="global-img" mode="widthFix"></image>
+                        </view>
+                        <view class='scroll-item-title'>{{cre_item.imgTitle}}</view>
+                    </view>
+                </scroll-view>
+            </view>
+
+        </view>
+
+    </view>
+    <!-- 自我评价 -->
+    <view class="global-card">
+        <view class="info-card-title">自我评价</view>
+        <view class="global-card-container" style="text-indent: 35rpx;">
+            <text class="selfassessment-info">{{personalInfo.selfAssessment}}</text>
+        </view>
+    </view>
+</view>

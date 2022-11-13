@@ -1,0 +1,18 @@
+<!--pages/comment/comment.wxml-->
+<view class="global-container">
+  <view class="global-card" style="height:{{height>0?height*0.85:1000}}px">
+    <view class="comment-title">留言板</view>
+    <form catchsubmit="formSubmit">
+      <input id="company" name="company" class="comment-input" value="{{forms.commany}}" placeholder="公司名称(必填)" />
+      <input id="name" name="name" class="comment-input" value="{{forms.name}}" placeholder="称呼(必填)" />
+      <input id="tel" name="tel" class="comment-input" value="{{forms.tel}}" placeholder="联系电话(必填)" />
+      <textarea class="comment-input" name="comment" value="{{forms.comment}}" bindblur="bindTextAreaBlur" style="width:90%" placeholder="留言|评价" />
+      <button class="send-button" type="primary" plain="true" formType="submit">留言</button>
+    </form>
+  </view>
+</view>
+
+<view class='wave wave_1'></view>
+<view class='wave wave_2'></view>
+<view class='wave wave_3'></view>
+<view class='wave wave_4'></view>
